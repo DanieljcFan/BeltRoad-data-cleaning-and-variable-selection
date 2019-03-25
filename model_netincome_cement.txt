@@ -1,0 +1,33 @@
+
+Call:
+lm(formula = Y ~ ., data = as.data.frame(cbind(Y, X[, index])))
+
+Residuals:
+       Min         1Q     Median         3Q        Max 
+-154939121  -72886179    4687678   57948888  163407759 
+
+Coefficients:
+                             Estimate Std. Error t value Pr(>|t|)  
+(Intercept)                -297890631  163454702  -1.822    0.085 .
+seasonQ2                     34741822   82177151   0.423    0.677  
+seasonQ3                     49814902   92066020   0.541    0.595  
+seasonQ4                     17166006   65859478   0.261    0.797  
+水泥.库存比年初增长           4664202    2751791   1.695    0.107  
+产量.水泥.北京.当月值_lag4    2352609    1947221   1.208    0.243  
+产量.水泥.河北.当月值_lag2     233647     140270   1.666    0.113  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 96970000 on 18 degrees of freedom
+Multiple R-squared:  0.7521,	Adjusted R-squared:  0.6694 
+F-statistic:   9.1 on 6 and 18 DF,  p-value: 0.0001176
+
+               (Intercept)                   seasonQ2                   seasonQ3                   seasonQ4 
+              -297890630.9                 34741822.0                 49814902.4                 17166005.8 
+       水泥.库存比年初增长 产量.水泥.北京.当月值_lag4 产量.水泥.河北.当月值_lag2 
+                 4664201.5                  2352608.8                   233647.1 
+[1] "confidence interval:"
+        fit       lwr       upr
+26 85283595 -38651458 209218648
+[1] "standard error:"
+[1] 58990791
