@@ -206,8 +206,8 @@ ggplot(df, aes(time, value, color=variable)) + geom_line() +
 #.txt: model and prediction
 
 pred <- predict(m$model,X_all[X_all$time == '2017 Q2',m$index+1],se.fit = T,interval = 'confidence')
-write.csv(df, file = 'netincome_cement.csv')
-sink('model_netincome_cement.txt')
+write.csv(df, file = 'fitted.csv')
+sink('model.txt')
 summary(m$model)
 m$model$coefficients
 print('confidence interval:')
